@@ -1,0 +1,25 @@
+int buttonPin=7;
+int ledPin=5;
+int estadoButton=0;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+void loop(){
+  estadoButton = digitalRead(buttonPin);
+  if(estadoButton=HIGH){
+    LedAzul();
+  }
+     else{
+       digitalWrite(ledPin, LOW);
+     }
+     }
+     
+     void LedAzul()
+     {
+       digitalWrite(5, HIGH);
+       delay(500);
+       digitalWrite(5, LOW);
+       delay(500);
+     }
